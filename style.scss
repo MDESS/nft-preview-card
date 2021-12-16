@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap');
+
+$card-BG: hsl(216, 50%, 16%);
+$cyan: hsl(178, 100%, 50%);
+$line: hsl(215, 32%, 27%);
+$White: hsl(0, 0%, 100%);
+$soft-blue : hsl(215, 51%, 70%);
+$main-BG: hsl(217, 54%, 11%);
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Outfit';
+  background-color: $main-BG;
+  padding: 20px 60px;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+.card{
+    width: 300px;
+    height: 500px;
+    background-color: $card-BG;
+    color: $White;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 4px 8px 10px -4px $card-BG;
+    
+    .image{
+        width: 260px;
+        height: 260px;
+        border-radius: 5px;
+        background-image: url('./images/image-equilibrium.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 25px 25px 0px 25px;
+        .icon-view{
+            display: none;
+            width: 40px;
+            height: 40px;
+            position: relative;
+            top: -60%;
+            left: 41%;
+            z-index: 99;
+        }
+        .background{
+            width: inherit;
+            height: inherit;
+            border-radius: 5px;
+            opacity: .4;
+            &:hover{
+                background-color: $cyan;
+                transition: .7s;
+            }
+        }
+        
+        &:hover{
+            cursor: pointer;
+        }
+
+        &:hover > .icon-view {
+            display: inline;
+        }
+
+        
+
+    }
+    .description{
+        width: 250px;
+        border-bottom: 2px solid $line;
+        padding-bottom: 15px;
+        h4{
+            &:hover{
+                cursor: pointer;
+                transition: .7s;
+                color: $cyan;
+            }
+        }
+        p{
+            font-size: 15px;
+            color: $soft-blue;
+        }
+        .crypto-details{
+            display: flex;
+            justify-content: space-between;
+            #amount{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                p{
+                    color: $cyan;
+                    margin: 5px;
+                    font-size: 12px;
+                }
+                img{
+                    width: 8px; 
+                    height: 15px;
+                }
+            }
+            #duration{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                p{
+                    margin: 5px;
+                    font-size: 12px;
+
+                }
+                
+                img{
+                    width: 13px; 
+                    height: 13px;
+                }
+            }
+        }
+
+    }
+
+    .profile{
+        width: 300px;
+        display: flex;
+        align-items: center;
+        padding: 5px 10px;
+        p{
+            font-size: 12px;
+            span{
+                color: $soft-blue;
+            }
+            &:hover{
+                cursor: pointer;
+                transition: .7s;
+                color: $cyan;
+            }
+        }
+        img{
+            width: 30px;
+            height: 30px;
+            margin: 9px 15px;
+            border: 1px solid $White;
+            border-radius: 50%;
+        }
+    }
+}
+
+
